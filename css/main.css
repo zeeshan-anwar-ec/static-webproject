@@ -52,7 +52,8 @@ main{
   justify-content: space-evenly;
   width: 100%;
   height: 500px;
-  background-color: #373b39;
+  /* padding: 0 100px 0 100px; */
+  background-color: #2A312E;
 }
 
 .tf-sub-container {
@@ -60,8 +61,8 @@ main{
   flex-direction: column;
   /* align-items: center; */
   /* justify-content: center; */
-  width: 18%;
-  height: 60%;
+  width: 250px;
+  height: 350px;
   /* border: 1px solid red; */
 }
 
@@ -106,25 +107,13 @@ main{
 }
 
 
-
-
-
-.tf-sub-container:nth-child(1){
-  padding-left: 20px;
-}
-
-
-.tf-sub-container:nth-child(4){
-  margin-left: 60px;
-  margin-right: 100px;
-  flex: 2;
+.tf-sub-container:nth-child(4){  
   color: white;
-  font-size: 14px;
+  flex: 0.6;
 }
 
 .tf-contact{
   color: white;
-  font-size: 14px;
   /* border: 1px solid red; */
   tab-size: 100px;
 }
@@ -138,12 +127,16 @@ main{
   margin-right: 40px;
 }
 
+.tf-sub-container:nth-child(4) p{
+  margin-top: 40px;
+}
+
 .tf-other-logos{
   margin-top: 50px;
   display: flex;
   justify-content: space-between;
   /* border: 1px solid red; */
-  height: 60px;
+  height: 45px;
   width: 100%;
 
 }
@@ -153,7 +146,7 @@ main{
 }
 
 .tf-logo2{
-  width: 40px;
+  width: 50px;
 }
 
 .tf-logo3{
@@ -161,15 +154,47 @@ main{
 }
 
 .tf-logo4{
-  width: 60px;
+  width: 50px;
 }
 
 
 /* --------------- Top footer styling ends --------------- */
 
 
+/* --------------- Buttom footer styling start --------------- */
+
 .bottom-footer {
+  display: flex;
+  align-items: center;
   width: 100%;
   height: 150px;
+  color:white;
   background-color: #1f2221;
 }
+
+.bottom-footer ul{
+  display: flex;
+  list-style: none;
+}
+
+.bottom-footer ul li a{
+  margin-left: 20px;
+  text-decoration: none;
+  color: white;
+}
+
+.bottom-footer p{
+  margin-left: 60px;
+}
+
+.bottom-footer .bf-anchor a{
+  margin-left: 30px;
+  font-weight: bold;
+  color: white;
+  padding: 5px;
+  text-decoration: none;
+  border-radius: 30px;
+  border: 2px solid white;
+}
+
+/* --------------- Buttom footer styling end --------------- */
