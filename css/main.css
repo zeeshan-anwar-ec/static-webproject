@@ -1,3 +1,17 @@
+:root{
+  --gold: #998152;
+  --light-gold:#988869;
+  --nav-bg:rgba(255, 255, 255, 0.584);
+  --nav-border: rgba(0, 0, 0, 0.182);
+  --nav-sub-r-border: #9981522f;
+  --white: white;
+  --nav-link:#2a312e;
+  --tf-bg:#2a312e;
+  --bf-bg:#1f2221;
+  --search-f:#74746D;
+}
+
+
 body {
   font-family: din-2014, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -12,12 +26,12 @@ body {
 .nav-bar {
   position: fixed;
   top: 0;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: var(--nav-bg);
   backdrop-filter: blur(10px);
   z-index: 100;
   width: 100%;
   height: 6rem;
-  border: 1px solid rgba(0, 0, 0, 0.182);
+  border: 1px solid --nav-border;
 }
 
 .nav-bar-list {
@@ -63,7 +77,7 @@ body {
   justify-content: center;
   width: 6rem;
   height: 6rem;
-  border: 1px solid #9981522f;
+  border: 1px solid var(--nav-sub-r-border);
 }
 
 .nav-li-box img {
@@ -77,14 +91,14 @@ body {
 }
 
 .nav-li-box svg:hover {
-  fill: #998152;
+  fill: var(--gold);
 }
 
 .nav-bar-list hr {
   margin: 0.2rem;
   width: 1.5rem;
   height: 0.2rem;
-  background: #998152;
+  background: var(--gold);
   border: none;
   transition: transform 0.2s ease-in-out;
 }
@@ -94,10 +108,10 @@ body {
 }
 
 .nav-left li:nth-child(1) a:hover {
-  color: #998152;
+  color: var(--gold);
 }
 .nav-left li:nth-child(2) a:hover {
-  color: #998152;
+  color: var(--gold);
 }
 
 .nav-bar-list li {
@@ -105,18 +119,100 @@ body {
 }
 
 .nav-bar-list li a {
-  font-size: 1rem;
+  font-size: 0.8rem;
   text-decoration: none;
-  color: #2a312e;
+  color: var(--nav-link);
 }
 
 /* --------------- Navbar styling end --------------- */
+
+
+/* --------------- Main styling start --------------- */
 
 main {
   width: 100%;
   height: 200vh;
   background-color: #b3bab7;
+  
 }
+
+.first-section{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 6rem;
+  width: 100%;
+  height: 34rem;
+  background-color: gray;
+}
+
+/* .bg-video{
+  scale: 2x;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 34rem;
+  overflow: hidden;
+} */
+
+.fs-sub{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 70rem;
+  height: 17rem;
+  /* border: 2px solid red; */
+}
+.fs-search{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 2em 0;
+  background-color: var(--white);
+}
+
+.fs-search span{
+  font-size: 0.8rem;
+  color: var(--search-f);
+}
+
+.fs-search input{
+  padding-left: 2rem;
+  background-color: var(--white);
+  font-size: 1.1rem;
+  width: 35rem;
+  border: none;
+  border: 0;
+}
+
+.fs-search input:focus{
+  outline: none;
+  border: none;
+}
+
+
+.fs-search button{
+  background-color: var(--light-gold);
+  padding: 1.5rem 4rem;
+  margin-right: 2rem;
+  border: none;
+  color: var(--white);
+}
+
+.fs-sub h1{
+  width: 50rem;
+  font-weight: 300;
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--white);
+}
+
+/* --------------- Main styling end --------------- */
+
 
 /* --------------- Top footer styling start --------------- */
 
@@ -128,7 +224,7 @@ main {
   width: 100%;
   height: 500px;
   /* padding: 0 100px 0 100px; */
-  background-color: #2a312e;
+  background-color: var(--tf-bg);
 }
 
 .tf-sub-container {
@@ -170,23 +266,23 @@ main {
 
 .tf-link-list li a {
   text-decoration: none;
-  color: white;
+  color: var(--white);
 }
 
 .tf-link-list li:nth-child(1) {
   margin-top: -10%;
   padding-bottom: 30px;
   font-size: 20px;
-  color: #998152;
+  color: var(--gold);
 }
 
 .tf-sub-container:nth-child(4) {
-  color: white;
+  color: var(--white);
   flex: 0.6;
 }
 
 .tf-contact {
-  color: white;
+  color: var(--white);
   /* border: 1px solid red; */
   tab-size: 100px;
 }
@@ -237,8 +333,8 @@ main {
   align-items: center;
   width: 100%;
   height: 150px;
-  color: white;
-  background-color: #1f2221;
+  color: var(--white);
+  background-color: var(--bf-bg);
 }
 
 .bottom-footer ul {
@@ -249,7 +345,7 @@ main {
 .bottom-footer ul li a {
   margin-left: 20px;
   text-decoration: none;
-  color: white;
+  color: var(--white);
 }
 
 .bottom-footer p {
@@ -259,11 +355,11 @@ main {
 .bottom-footer .bf-anchor a {
   margin-left: 30px;
   font-weight: bold;
-  color: white;
+  color: var(--white);
   padding: 5px;
   text-decoration: none;
   border-radius: 30px;
-  border: 2px solid white;
+  border: 2px solid var(--white);
 }
 
 /* --------------- Buttom footer styling end --------------- */
