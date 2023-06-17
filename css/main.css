@@ -1,22 +1,20 @@
-:root{
+:root {
   --gold: #998152;
-  --light-gold:#988869;
-  --nav-bg:rgba(255, 255, 255, 0.584);
+  --light-gold: #988869;
+  --nav-bg: rgba(255, 255, 255, 0.584);
   --nav-border: rgba(0, 0, 0, 0.182);
   --nav-sub-r-border: #9981522f;
   --white: white;
-  --nav-link:#2a312e;
-  --tf-bg:#2a312e;
-  --bf-bg:#1f2221;
-  --search-f:#74746D;
+  --nav-link: #2a312e;
+  --tf-bg: #2a312e;
+  --bf-bg: #1f2221;
+  --search-f: #74746d;
 }
-
 
 body {
   font-family: din-2014, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: 62.5%;
   padding: 0;
   margin: 0;
 }
@@ -60,6 +58,14 @@ body {
   /* border: 1px solid red; */
 }
 
+.nav-center img{
+  transition: opacity 0.2s ease-in-out;
+}
+
+.nav-center img:hover{
+  opacity: 0.5;
+}
+
 .nav-right {
   display: flex;
   align-items: center;
@@ -83,7 +89,7 @@ body {
 .nav-li-box img {
   width: 1.5rem;
   height: 1.5rem;
-  transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
 }
 
 .nav-right .nav-li-box:nth-child(1):hover img {
@@ -107,12 +113,14 @@ body {
   transform: scale(1.4);
 }
 
-.nav-left li:nth-child(1) a:hover {
+.nav-left li a {
+  transition: color 0.1s ease-in-out;
+}
+
+.nav-left li a:hover {
   color: var(--gold);
 }
-.nav-left li:nth-child(2) a:hover {
-  color: var(--gold);
-}
+
 
 .nav-bar-list li {
   text-transform: uppercase;
@@ -126,17 +134,15 @@ body {
 
 /* --------------- Navbar styling end --------------- */
 
-
 /* --------------- Main styling start --------------- */
 
 main {
   width: 100%;
   height: 200vh;
   background-color: #b3bab7;
-  
 }
 
-.first-section{
+.first-section {
   position: relative;
   display: flex;
   align-items: center;
@@ -157,7 +163,7 @@ main {
   overflow: hidden;
 } */
 
-.fs-sub{
+.fs-sub {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -166,7 +172,7 @@ main {
   height: 17rem;
   /* border: 2px solid red; */
 }
-.fs-search{
+.fs-search {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -175,12 +181,12 @@ main {
   background-color: var(--white);
 }
 
-.fs-search span{
+.fs-search span {
   font-size: 0.8rem;
   color: var(--search-f);
 }
 
-.fs-search input{
+.fs-search input {
   padding-left: 2rem;
   background-color: var(--white);
   font-size: 1.1rem;
@@ -189,13 +195,12 @@ main {
   border: 0;
 }
 
-.fs-search input:focus{
+.fs-search input:focus {
   outline: none;
   border: none;
 }
 
-
-.fs-search button{
+.fs-search button {
   background-color: var(--light-gold);
   padding: 1.5rem 4rem;
   margin-right: 2rem;
@@ -203,7 +208,7 @@ main {
   color: var(--white);
 }
 
-.fs-sub h1{
+.fs-sub h1 {
   width: 50rem;
   font-weight: 300;
   text-align: center;
@@ -212,7 +217,6 @@ main {
 }
 
 /* --------------- Main styling end --------------- */
-
 
 /* --------------- Top footer styling start --------------- */
 
@@ -252,6 +256,11 @@ main {
 
 .social-container img {
   width: 40%;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.social-container img:hover {
+  opacity: 0.5;
 }
 
 .tf-link-list {
@@ -267,6 +276,11 @@ main {
 .tf-link-list li a {
   text-decoration: none;
   color: var(--white);
+  transition: color 0.1s ease-in-out;
+}
+
+.tf-link-list li a:hover {
+  color: var(--gold);
 }
 
 .tf-link-list li:nth-child(1) {
@@ -343,23 +357,36 @@ main {
 }
 
 .bottom-footer ul li a {
+  font-size: 0.8rem;
   margin-left: 20px;
   text-decoration: none;
   color: var(--white);
+  transition: color 0.2s ease-in-out;
+}
+
+.bottom-footer ul li a:hover {
+  color: var(--gold);  
 }
 
 .bottom-footer p {
+  opacity: 0.8;
+  font-size: 0.8rem;
   margin-left: 60px;
 }
 
 .bottom-footer .bf-anchor a {
-  margin-left: 30px;
-  font-weight: bold;
+
+  margin-left: 18rem;
+  font-size: 1rem;
   color: var(--white);
-  padding: 5px;
+  padding: 3px 4px 3px 4px;
   text-decoration: none;
   border-radius: 30px;
   border: 2px solid var(--white);
+  transition: opacity 0.2s ease-in-out;
 }
 
+.bottom-footer .bf-anchor a:hover {
+  opacity: 0.5;
+}
 /* --------------- Buttom footer styling end --------------- */
