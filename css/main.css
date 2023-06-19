@@ -10,6 +10,8 @@
   --bf-bg: #1f2221;
   --search-f: #74746d;
   --card-button: #f4f4f4;
+  --black:#000000;
+  --section-3-bg: rgb(147, 146, 135);
 }
 
 body {
@@ -137,11 +139,8 @@ body {
 
 /* --------------- Main styling start --------------- */
 
-main {
-  width: 100%;
-  height: 200vh;
-  background-color: #b3bab7;
-}
+
+/* Main Section-I */
 
 .first-section {
   position: relative;
@@ -225,6 +224,9 @@ main {
   color: var(--white);
 }
 
+
+/* Main Section-II */
+
 .second-section {
   height: 40rem;
   padding: 0 10rem;
@@ -247,7 +249,6 @@ main {
   padding: 0%;
   width: 21rem;
   height: 23rem;
-  /* border: 1px solid red; */
 }
 
 .ss-card button{
@@ -269,7 +270,6 @@ main {
 .card-image{
   width: 100%;
   height: 14rem;
-  /* border: 1px solid red; */
 }
 
 .card-image img{
@@ -279,10 +279,9 @@ main {
 .card-text{
   width: 100%;
   height: 8.5rem;
-  /* border: 1px solid red; */
 }
 
-.card-text h6{
+.card-text h5{
   margin: 1rem 0 0 0;
   font-weight: 100;
   font-size: 1.2rem;
@@ -292,7 +291,66 @@ main {
   color: var(--gold);
 }
 
+
+/* Main Section-III */
+
+.third-section{
+  display: flex;
+  width: 100%;
+  height: 40rem;
+  background-color: var(--section-3-bg);
+}
+
+.ts-sub{
+  width: 50%;
+  overflow: hidden;
+}
+
+.ts-sub button{
+  padding: 1rem 1rem;
+  background-color:var(--tf-bg); 
+  color: var(--white);
+  border: none;
+}
+
+.ts-sub button:hover{
+  background-color: var(--black);
+}
+
+.ts-sub:nth-child(1){
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ts-sub div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  width: 70%;
+  height: 70%;
+  color: var(--white);
+}
+
+.ts-sub div h5{
+  font-size: 1.625rem;
+  margin-bottom: 0.5rem;
+  font-weight: 100;
+}
+
+.ts-sub div p{
+  font-size: 1rem;
+  font-weight: 100;
+}
+
+
 /* --------------- Main styling end --------------- */
+
+
+
+
 
 /* --------------- Top footer styling start --------------- */
 
@@ -303,18 +361,16 @@ main {
   justify-content: space-evenly;
   width: 100%;
   height: 500px;
-  /* padding: 0 100px 0 100px; */
   background-color: var(--tf-bg);
+  /* border: 1px solid red; */
+
 }
 
 .tf-sub-container {
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
-  /* justify-content: center; */
   width: 250px;
   height: 350px;
-  /* border: 1px solid red; */
 }
 
 .tf-logo {
@@ -344,9 +400,9 @@ main {
 }
 
 .tf-link-list li {
-  text-transform: uppercase;
-  padding-bottom: 20px;
   font-size: 14px;
+  padding-bottom: 20px;
+  text-transform: uppercase;
 }
 
 .tf-link-list li a {
@@ -373,7 +429,6 @@ main {
 
 .tf-contact {
   color: var(--white);
-  /* border: 1px solid red; */
   tab-size: 100px;
 }
 
@@ -392,10 +447,9 @@ main {
 .tf-other-logos {
   margin-top: 50px;
   display: flex;
-  justify-content: space-between;
-  /* border: 1px solid red; */
   height: 45px;
   width: 100%;
+  justify-content: space-between;
 }
 
 .tf-logo1 {
@@ -414,7 +468,9 @@ main {
   width: 50px;
 }
 
-/* --------------- Top footer styling ends --------------- */
+/* --------------- Top footer styling ends ------------------- */
+
+
 
 /* --------------- Buttom footer styling start --------------- */
 
