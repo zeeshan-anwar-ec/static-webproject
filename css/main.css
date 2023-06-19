@@ -10,10 +10,10 @@
   --bf-bg: #1f2221;
   --search-f: #74746d;
   --card-button: #f4f4f4;
-  --black:#000000;
+  --black: #000000;
   --section-3-bg: rgb(147, 146, 135);
-  --s4-p: #484A46;
-  --bf-text:#A2A39A;
+  --s4-p: #484a46;
+  --bf-text: #a2a39a;
 }
 
 body {
@@ -53,7 +53,25 @@ body {
 }
 
 .nav-left li a {
+  padding: 1rem 0;
   margin-right: 2rem;
+  border: 2px solid transparent;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.nav-left li:nth-child(2) hr {
+  transition: opacity 0.3s ease-in-out;
+  margin-top: -0.5rem;
+  margin-left: 0;
+  width: 8.7rem;
+  background-color: var(--gold);
+  border: none;
+  opacity: 0;
+}
+
+
+.nav-left li:nth-child(2):hover hr{
+  opacity: 1;
 }
 
 .nav-center {
@@ -141,8 +159,7 @@ body {
 
 /* --------------- Main styling start --------------- */
 
-
-/* Main Section-I */
+/*------------------- Main Section-I -------------------*/
 
 .first-section {
   position: relative;
@@ -219,15 +236,13 @@ body {
 }
 
 .fs-sub h1 {
-  width: 580rem;
   font-weight: 100;
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 2.5  rem;
   color: var(--white);
 }
 
-
-/* Main Section-II */
+/*------------------- Main Section-II -------------------*/
 
 .second-section {
   height: 40rem;
@@ -240,92 +255,89 @@ body {
   padding: 0 2rem;
 }
 
-
 .second-section h5 {
   margin-top: 0;
   font-size: 1.5rem;
-  font-weight: 50; 
+  font-weight: 50;
 }
 
 .ss-card {
   padding: 0%;
-  width: 21rem;
+  width: 19rem;
   height: 23rem;
 }
 
-.ss-card button{
+.ss-card button {
   padding: 1rem 1rem;
   border: none;
-  background-color:var(--card-button); 
+  background-color: var(--card-button);
 }
 
-.ss-card button:hover{
+.ss-card button:hover {
   background-color: var(--nav-link);
   color: var(--white);
 }
 
-
-.ss-card:nth-child(3) .card-image img{
+.ss-card:nth-child(3) .card-image img {
   height: 100%;
 }
 
-.card-image{
+.card-image {
   width: 100%;
   height: 14rem;
 }
 
-.card-image img{
+.card-image img {
   width: 100%;
 }
 
-.card-text{
+.card-text {
   width: 100%;
   height: 8.5rem;
 }
 
-.card-text h5{
+.card-text h5 {
   margin: 1rem 0 0 0;
   font-weight: 100;
   font-size: 1.2rem;
 }
 
-.card-text span{
+.card-text span {
   color: var(--gold);
 }
 
+/*------------------- Main Section-III -------------------*/
 
-/* Main Section-III */
-
-.third-section{
+.third-section {
   display: flex;
   width: 100%;
   height: 40rem;
   background-color: var(--section-3-bg);
 }
 
-.ts-sub{
+.ts-sub {
   width: 50%;
   overflow: hidden;
 }
 
-.ts-sub button{
+.ts-sub button {
   padding: 1rem 1rem;
-  background-color:var(--tf-bg); 
+  background-color: var(--tf-bg);
   color: var(--white);
   border: none;
 }
 
-.ts-sub button:hover{
+.ts-sub button:hover {
   background-color: var(--black);
 }
 
-.ts-sub:nth-child(1){
+.ts-sub:nth-child(1) {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.ts-sub div{
+.ts-sub div {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -336,46 +348,44 @@ body {
   color: var(--white);
 }
 
-.ts-sub div h5{
+.ts-sub div h5 {
   font-size: 1.625rem;
   margin-bottom: 0.5rem;
   font-weight: 100;
 }
 
-.ts-sub div p{
+.ts-sub div p {
   font-size: 1rem;
   font-weight: 100;
 }
 
-/* Main Section-IV */
+/*------------------- Main Section-IV -------------------*/
 
-.fourth-section{
+.fourth-section {
   display: flex;
   width: 100%;
   justify-content: space-evenly;
   padding: 8rem 0rem;
 }
 
-
 .fs-card {
   padding: 0%;
   width: 19rem;
-  height: 35rem;
-   /* border: 1px solid red; */  
+  height: 30rem;
+  /* border: 1px solid red; */
 }
 
-.fs-card-image img{
+.fs-card-image img {
   transform: scale(1);
   transition: transform 0.3s ease-in-out;
   width: 100%;
 }
 
-.fs-card:hover img{
+.fs-card:hover img {
   transform: scale(1.1);
-
 }
 
-.fs-card-image{
+.fs-card-image {
   overflow: hidden;
   width: 100%;
   height: 13rem;
@@ -383,7 +393,7 @@ body {
   /* border: 1px solid red; */
 }
 
-.fs-card:hover div{
+.fs-card:hover div {
   height: 11.5rem;
 }
 
@@ -391,68 +401,113 @@ body {
   padding: 0%;
   width: 21rem;
   height: 35rem;
-  /* border: 1px solid red; */  
+  /* border: 1px solid red; */
 }
 
-.fs-f-card h5{
+.fs-f-card h5 {
   font-size: 1.5rem;
   font-weight: 100;
 }
 
-.fs-f-card p{
+.fs-f-card p {
   font-weight: 100;
   color: var(--s4-p);
 }
 
-.fs-f-card button{
+.fs-f-card button {
   padding: 1rem 2rem;
   border: none;
-  background-color:var(--card-button); 
+  background-color: var(--card-button);
 }
 
-.fs-f-card button:hover{
+.fs-f-card button:hover {
   background-color: var(--nav-link);
   color: var(--white);
 }
 
-
-.fs-card:nth-child(4) img{
+.fs-card:nth-child(4) img {
   scale: 1.25;
 }
 
-.fs-card-text{
+.fs-card-text {
   margin-top: 1rem;
   width: 100%;
   height: 22rem;
   /* border: 1px solid red; */
 }
 
-.fs-card-text span{
+.fs-card-text span {
   font-size: 0.9rem;
-  color: #74746D;
+  color: #74746d;
 }
 
-.fs-card-text h6{
+.fs-card-text h6 {
   margin: 1rem 0;
   font-size: 1.25rem;
   font-weight: 100;
-
 }
 
-.fs-card-text p{
+.fs-card-text p {
   font-weight: 100;
   color: var(--s4-p);
 }
 
-.fs-card-text a{
+.fs-card-text a {
   text-decoration: none;
   color: var(--gold);
   font-size: 1rem;
 }
 
+/*------------------- Main Section-V -------------------*/
+
+.fifth-section {
+  padding: 4rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  background-color: var(--card-button);
+}
+
+.fif-card {
+  height: 24rem;
+  width: 19rem;
+  transition: margin 0.3s ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  /* border: 1px solid red; */
+}
+
+.fif-card:hover{
+  margin-top: -4rem;
+}
+
+.fif-card .fif-image{
+  width: 100%;
+  height: 13.5rem;
+  overflow: hidden;
+  /* border: 1px solid red; */
+}
+
+.fif-card .fif-image img{
+  scale: 1.2;
+  width: 100%;
+}
+
+.fif-card .fif-text{
+  padding: 1rem 0 0 0.5rem;
+  width: 100%;
+  height: 10.5rem;
+  /* border: 1px solid red; */
+}
+
+.fif-text h6{
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
 /* --------------- Main styling end --------------- */
-
-
 
 /* --------------- Top footer styling start --------------- */
 
@@ -464,8 +519,23 @@ body {
   width: 100%;
   height: 500px;
   background-color: var(--tf-bg);
+  animation: colorAnimation 4s infinite cubic-bezier(0.42, 0, 0.58, 1);
   /* border: 1px solid red; */
+}
 
+@keyframes colorAnimation {
+  0% {
+    background-color: var(--tf-bg);
+  }
+  25% {
+    background-color: #00539c;
+  }
+  50% {
+    background-color: #f96167;
+  }
+  100% {
+    background-color: #317773;
+  }
 }
 
 .tf-sub-container {
@@ -571,8 +641,6 @@ body {
 }
 
 /* --------------- Top footer styling ends ------------------- */
-
-
 
 /* --------------- Buttom footer styling start --------------- */
 
