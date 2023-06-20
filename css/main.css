@@ -34,11 +34,17 @@ body {
   backdrop-filter: blur(10px);
   z-index: 100;
   width: 100%;
-  height: 6rem;
   border: 1px solid --nav-border;
 }
-
+/* .hover-block{
+  display: none;
+  width: 100%;
+  height: 20rem;
+  background-color: var(--card-button);
+  border: 2px solid red;
+} */
 .nav-bar-list {
+  padding-left: 0%;
   margin: 0%;
   display: flex;
   justify-content: space-between;
@@ -48,18 +54,21 @@ body {
 .nav-left {
   display: flex;
   align-items: center;
-  width: 33%;
+  padding-left: 2rem;
+  width: 33.3333333333%;
   /* border: 1px solid red; */
 }
 
 .nav-left li a {
   padding: 1rem 0;
   margin-right: 2rem;
-  border: 2px solid transparent;
   transition: border-color 0.3s ease-in-out;
 }
+.nav-left li:nth-child(3) a{
+ display: none;
+}
 
-.nav-left li:nth-child(2) hr {
+.nav-left li hr {
   transition: opacity 0.3s ease-in-out;
   margin-top: -0.5rem;
   margin-left: 0;
@@ -69,21 +78,30 @@ body {
   opacity: 0;
 }
 
+.nav-left li:nth-child(1) hr {
+  width: 7rem;
+}
 
-.nav-left li:nth-child(2):hover hr{
+
+.nav-left li:hover hr{
   opacity: 1;
 }
+
 
 .nav-center {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 33%;
+  width: 33.3333333333%;
   /* border: 1px solid red; */
 }
 
 .nav-center img {
   transition: opacity 0.2s ease-in-out;
+}
+
+.nav-center img:nth-child(2){
+  display:none;
 }
 
 .nav-center img:hover {
@@ -94,8 +112,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: end;
-  display: flex;
-  width: 33%;
+  width: 33.3333333333%;
   height: 6rem;
   /* border: 1px solid red; */
 }
@@ -138,11 +155,7 @@ body {
 }
 
 .nav-left li a {
-  transition: color 0.1s ease-in-out;
-}
-
-.nav-left li a:hover {
-  color: var(--gold);
+  transition: color 0.2s ease-in-out;
 }
 
 .nav-bar-list li {
@@ -153,6 +166,45 @@ body {
   font-size: 0.8rem;
   text-decoration: none;
   color: var(--nav-link);
+}
+
+
+@media (max-width: 980px) {
+  /* Styles applied when the screen width is 768 pixels or wider */
+  .nav-left li:nth-child(1), .nav-left li:nth-child(2) {
+    display: none;
+  }
+  .nav-left{
+    justify-content: start;
+    padding-left: -4rem;
+  }
+
+ 
+ 
+  .nav-left li:nth-child(3) a{
+    border: 1px solid var(--nav-sub-r-border);
+    padding: 2.5rem;
+    display: block;
+    /* float: left; */
+   }
+   .nav-left{
+    padding: 0px;
+   }
+
+  .nav-right li:nth-child(1){
+    display: none;
+  }
+
+  .nav-bar-list{
+    padding: 0;
+  }
+  .nav-center img:nth-child(1){
+    display: none;
+  }
+
+  .nav-center img:nth-child(2){
+    display: block;
+  }
 }
 
 /* --------------- Navbar styling end --------------- */
@@ -190,12 +242,13 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 70rem;
+  width: 90%;
   height: 17rem;
 }
 
 .fs-search {
   display: flex;
+  /* flex-wrap: wrap; */
   align-items: center;
   justify-content: space-between;
   width: 100%;
@@ -203,7 +256,17 @@ body {
   background-color: var(--white);
 }
 
+
+.location{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 10rem;
+  /* border: 2px solid red; */
+}
+
 .fs-search svg {
+  opacity: 50%;
   margin-right: -3rem;
 }
 
@@ -212,11 +275,16 @@ body {
   color: var(--search-f);
 }
 
+.fs-search svg,span:hover {
+  opacity: 1;
+  color: var(--black);
+}
+
 .fs-search input {
   padding-left: 2rem;
   background-color: var(--white);
   font-size: 1.1rem;
-  width: 35rem;
+  max-width: 35rem;
   border: none;
   border: 0;
 }
@@ -235,24 +303,52 @@ body {
   cursor: pointer;
 }
 
+.fs-search button:hover{
+  background-color: var(--s4-p);
+
+}
+
 .fs-sub h1 {
   font-weight: 100;
   text-align: center;
-  font-size: 2.5  rem;
+  font-size: 2.5rem;
   color: var(--white);
 }
+
+@media (max-width: 980px) {
+  .fs-search{
+    padding: 1.5rem 0;
+    width: 50%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .fs-search button{
+    margin-top: 2rem;
+    margin-right: 0;
+    padding: 1.2rem 5rem;
+  }
+
+  .location{
+    display: none;
+  }
+  
+  .fs-search input{
+    padding: 0;
+  }
+}
+
 
 /*------------------- Main Section-II -------------------*/
 
 .second-section {
-  height: 40rem;
-  padding: 0 10rem;
+  margin-top: 5rem;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   background-color: var(--white);
-  padding: 0 2rem;
+  margin-bottom: 5rem;
 }
 
 .second-section h5 {
@@ -267,6 +363,11 @@ body {
   height: 23rem;
 }
 
+.ss-card a{
+  text-decoration: none;
+  color:var(--gold)
+}
+
 .ss-card button {
   padding: 1rem 1rem;
   border: none;
@@ -279,12 +380,29 @@ body {
 }
 
 .ss-card:nth-child(3) .card-image img {
+  overflow: hidden;
   height: 100%;
 }
 
+.card-image img {
+  height: 100%;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+}
+
 .card-image {
+  overflow: hidden;
   width: 100%;
   height: 14rem;
+}
+
+.ss-card:hover img {
+  transform: scale(1.1);
+}
+
+.ss-card:hover .card-image {
+  /* transform: scale(1.1); */
+  /* height: 13rem; */
 }
 
 .card-image img {
@@ -306,18 +424,37 @@ body {
   color: var(--gold);
 }
 
+
+@media (max-width: 980px) {
+.second-section {
+  padding: 5rem 0;
+  justify-content: space-evenly;
+}
+
+.ss-card{
+  margin: 2rem;
+}
+  .ss-card:nth-child(1){
+    margin-bottom: -2rem;
+    padding-bottom: -2rem;
+    width: 80%;
+  }
+
+}
+
+
 /*------------------- Main Section-III -------------------*/
 
 .third-section {
   display: flex;
   width: 100%;
-  height: 40rem;
   background-color: var(--section-3-bg);
 }
 
 .ts-sub {
   width: 50%;
   overflow: hidden;
+  /* border: 2px solid red; */
 }
 
 .ts-sub button {
@@ -359,10 +496,31 @@ body {
   font-weight: 100;
 }
 
+@media (max-width:980px) {
+  .third-section{
+    flex-direction: column-reverse;
+  }
+
+  .ts-sub{
+    width: 100%;
+  }
+
+  .ts-sub:nth-child(1){
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 0;
+  }
+  
+}
+
 /*------------------- Main Section-IV -------------------*/
 
 .fourth-section {
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
   justify-content: space-evenly;
   padding: 8rem 0rem;
@@ -447,6 +605,8 @@ body {
   font-weight: 100;
 }
 
+
+
 .fs-card-text p {
   font-weight: 100;
   color: var(--s4-p);
@@ -512,6 +672,7 @@ body {
 /* --------------- Top footer styling start --------------- */
 
 .top-footer {
+  z-index: 1000;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -692,3 +853,6 @@ body {
   opacity: 0.5;
 }
 /* --------------- Buttom footer styling end --------------- */
+
+
+
