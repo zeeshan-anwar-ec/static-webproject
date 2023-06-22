@@ -334,14 +334,15 @@ body {
   display: flex;
 }
 .fs-search {
+  border-radius: 2rem 0 2rem 0;
   display: flex;
   /* flex-wrap: wrap; */
   align-items: center;
   justify-content: space-between;
   width: 100%;
   padding: 1.5em 0;
-  /* border: 1px solid red; */
-  background-color: var(--white);
+  border: 1px solid white;
+  background-color: rgba(0, 0, 0, 0.274);
 }
 
 .location-button {
@@ -354,7 +355,6 @@ body {
   margin-right: 2rem;
   /* border: 2px solid red;*/
 }
-
 .svg-parent {
   display: flex;
   align-items: center;
@@ -366,7 +366,7 @@ body {
 }
 .fs-search span {
   font-size: 0.8rem;
-  color: var(--search-f);
+  color: var(--white);
 }
 
 .fs-search svg:hover {
@@ -380,6 +380,7 @@ body {
   font-size: 1.1rem;
   max-width: 35rem;
   border: none;
+  background:none;
   /* border: 1px solid red; */
 }
 
@@ -423,7 +424,7 @@ body {
   .fs-search {
     width: 21.25rem;
     padding: 1.5rem 0;
-    width: 50%;
+    width: 45%;
     flex-direction: column;
     align-items: center;
   }
@@ -449,7 +450,7 @@ body {
   }
 
   .fs-sub h1 {
-    font: 2rem sans-serif;
+    font: 1.5rem sans-serif;
     font-weight: 300;
     font-style: unset;
   }
@@ -574,14 +575,14 @@ body {
 
   .card-image {
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
   }
 
   .card-text h6 {
     margin-top: 2rem;
     margin-bottom: 1rem;
     font-weight: 100;
-    font-size: 200%;
+    font-size: 130%;
   }
 
   .ss-card .card-text p {
@@ -1033,11 +1034,11 @@ body {
 }
 
 .tf-sub-container:nth-child(4) p {
-  margin-top: 40px;
+  margin-top: 2rem;
 }
 
 .tf-other-logos {
-  margin-top: 50px;
+  /* margin-top: 50px; */
   display: flex;
   height: 45px;
   width: 100%;
@@ -1045,19 +1046,19 @@ body {
 }
 
 .tf-logo1 {
-  width: 70px;
+  height: 100%;
 }
 
 .tf-logo2 {
-  width: 50px;
+  height: 100%;
 }
 
 .tf-logo3 {
-  width: 100px;
+  height: 100%;
 }
 
 .tf-logo4 {
-  width: 50px;
+  height: 100%;
 }
 
 @media (max-width: 1216px) {
@@ -1096,7 +1097,6 @@ body {
     flex-wrap: nowrap;
     flex-direction: column;
     align-items: center;
-    height: 39rem;
   }
 
   .top-footer .tf-sub-container:nth-child(2) {
@@ -1118,37 +1118,14 @@ body {
   }
 
   .tf-other-logos {
-    /* border: 1px solid red; */
     width: 100%;
     padding: 0%;
     margin-top: 2rem;
-    margin-left: 1rem;
+    justify-content: space-evenly;
   }
-
-  .tf-other-logos:nth-child(3)  {
-    /* border: 1px solid red; */
-    width: 100%;
-    padding: 0%;
-    margin-top: 2rem;
-    margin-left: 1rem;
-  }
+  
 
 
-  .tf-logo1 {
-    width: 4rem;
-  }
-  .tf-logo2 {
-    margin-left: -4rem;
-    width: 3rem;
-  }
-  .tf-logo3 {
-    margin-left: -4rem;
-    width: 5rem;
-  }
-  .tf-logo4 {
-    margin-left: -6rem;
-
-  }
   .tf-sub-container ul li {
     display: none;
   }
@@ -1168,6 +1145,7 @@ body {
   }
 
   .tf-contact {
+    margin-top: 2rem;
     /* border: 1px solid red; */
     margin-left: 1rem;
     width: 19rem;
