@@ -72,17 +72,23 @@ body {
   width: 17rem;
   height: 20rem;
   margin-left: 4rem;
-  border: 1px solid red;
+  transition: margin-top 0.3s ease-in-out;
 }
 
+.hb-card:hover {
+  margin-top: -2rem;
+}
+
+
+
 .hb-card-links {
+  font-weight:900;
   /* border: 1px solid red; */
   height: 20rem;
 }
 
-.line {
-  padding: 0%;
-  /* border: 2px solid red; */
+.hb-card-links div{
+  margin-bottom: 1rem; ;
 }
 
 .hb-card:last-child {
