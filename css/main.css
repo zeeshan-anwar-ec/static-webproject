@@ -1,11 +1,11 @@
 @font-face {
   font-family: "din-2014";
-  src: url("/fonts/din-2014.ttf") format("truetype"); /* Update the font file path and format if needed */
+  src: url("./fonts/din-2014.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "din-2014-light";
-  src: url("/fonts/din-2014-light.ttf") format("truetype"); /* Update the font file path and format if needed */
+  src: url("./fonts/din-2014-light.ttf") format("truetype"); 
 }
 
 :root {
@@ -754,7 +754,7 @@ body {
   /* border: 1px solid red; */
 }
 
-.fs-card:hover div {
+.fs-card:hover .fs-card-image {
   height: 11.5rem;
 }
 
