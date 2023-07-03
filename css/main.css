@@ -1,11 +1,11 @@
 @font-face {
   font-family: "din-2014";
-  src: url("./fonts/din-2014.ttf") format("truetype");
+  src: url("/fonts/din-2014.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "din-2014-light";
-  src: url("./fonts/din-2014-light.ttf") format("truetype"); 
+  src: url("/fonts/din-2014-light.ttf") format("truetype"); 
 }
 
 :root {
@@ -730,32 +730,37 @@ body {
   padding: 8rem 0rem;
 }
 
-.fs-card {
+.frths-card {
   width: 19rem;
   /* height: 30rem; */
   /* border: 1px solid red; */
 }
 
-.fs-card-image img {
+.frths-card-image img {
   width: 100%;
   object-fit: cover;
   transition: transform 0.3s ease-in-out;
 }
 
-.fs-card:hover img {
+.frths-card:hover img {
   transform: scale(1.1);
 }
 
-.fs-card-image {
+/* .frths-card:hover .frths-card:nth-child(4) img {
+  transform: scale(1.5);
+} */
+
+.frths-card-image {
   display: flex;
   overflow: hidden;
+  height: 12rem;
   width: 100%;
   transition: height 0.3s ease-in-out;
   /* border: 1px solid red; */
 }
 
-.fs-card:hover .fs-card-image {
-  height: 11.5rem;
+.frths-card:hover .frths-card-image {
+  height: 11rem;
 }
 
 .fs-f-card {
@@ -786,33 +791,33 @@ body {
   color: var(--white);
 }
 
-.fs-card:nth-child(4) img {
+/* .frths-card:nth-child(4) img {
   scale: 1.25;
-}
+} */
 
-.fs-card-text {
+.frths-card-text {
   margin-top: 1rem;
   width: 100%;
   /* border: 1px solid red; */
 }
 
-.fs-card-text span {
+.frths-card-text span {
   font-size: 0.9rem;
   color: #74746d;
 }
 
-.fs-card-text h6 {
+.frths-card-text h6 {
   margin: 1rem 0;
   font-size: 1.25rem;
   font-weight: 100;
 }
 
-.fs-card-text p {
+.frths-card-text p {
   font-weight: 100;
   color: var(--s4-p);
 }
 
-.fs-card-text a {
+.frths-card-text a {
   text-decoration: none;
   color: var(--gold);
   font-size: 1rem;
@@ -834,13 +839,17 @@ body {
     margin-left: 5rem;
   }
 
-  .fs-card {
+  .frths-card {
     margin-top: 5rem;
     margin-left: 4rem;
   }
 }
 
 @media (max-width: 768px) {
+  .frths-card-image {
+    height: auto;
+  }
+
   .icon {
     display: none;
   }
@@ -857,7 +866,7 @@ body {
     /* border: 1px solid red; */
   }
 
-  .fs-card {
+  .frths-card {
     width: 80%;
     height: auto;
     margin-top: 0rem;
@@ -867,7 +876,7 @@ body {
     /* border: 1px solid red; */
   }
 
-  .fs-card-text p {
+  .frths-card-text p {
     display: none;
   }
 }
